@@ -1,0 +1,39 @@
+.taskItem {
+    padding: 10px;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 5px;
+    border: 3px solid #cccccc;
+    background-color: #cccccc;
+    p {
+        margin: 0;
+    }
+}
+
+.backgroundColor0 {
+    background-color: #ffffff;
+}
+
+.backgroundColor1 {
+    background-color: #ffd7b5;
+}
+
+.backgroundColor2 {
+    background-color: #ffb38a;
+}
+
+.backgroundColor3 {
+    background-color: #ff9248;
+}
+
+.backgroundColor4 {
+    background-color: #ff6700;
+}
+
+.isTaskSelected {
+    border-color: red;
+}
+
+.title {
+    text-decoration: line-through;
+}
