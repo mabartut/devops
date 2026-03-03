@@ -1,9 +1,7 @@
 name: devops
 
 on:
-  push: [ main ]
-
-
+  push: { main }
 
 jobs:
   deploy:
