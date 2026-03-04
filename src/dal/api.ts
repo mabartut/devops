@@ -1,18 +1,19 @@
+const prepareHeaders = () => {
+    const apiKey = import.meta.env.API_KEY;
+    return apiKey ? {'api-key': apiKey} : undefined
+}
+
 export const getTask =
     (boardId: string, selectedTaskId: string): Promise<GetTaskOutput> =>
         fetch(`https://trelly.it-incubator.app/api/1.0/boards/${boardId}/tasks/${selectedTaskId}`,
             {
-                headers: {
-                    'api-key': '9810f007-057c-46e1-9b68-66fe6cbf1316'
-                }
+                headers: prepareHeaders()
             }).then(res => res.json())
 
 export const getTasks =
     (): Promise<GlobalTaskListResponse> =>
         fetch('https://trelly.it-incubator.app/api/1.0/boards/tasks', {
-            headers: {
-                'api-key': '9810f007-057c-46e1-9b68-66fe6cbf1316'
-            }
+            headers: prepareHeaders()
         }).then(res => res.json())
 
 export type GetTaskOutput = {
